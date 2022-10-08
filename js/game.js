@@ -16,7 +16,7 @@ let selectedOption = 0;
 
 //Constants
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = localStorage.getItem("flagNum");
+const MAX_QUESTIONS = 10;
 startGame = () =>{
     questionCounter = 0;
     score = 0
