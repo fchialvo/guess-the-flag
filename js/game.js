@@ -30,11 +30,20 @@ getNewFlag = () => {
     if(availableFlags.length == 0 || questionCounter >= MAX_QUESTIONS){
         localStorage.setItem('mostRecentScore', score)
         //go to the end page
+        if(document.documentElement.lang == 'en'){
         return window.location.assign('end.html');
+        }
+        else{
+            return window.location.assign('fin.html')
+        }
     }
     questionCounter++;
-    progressText.innerText = "Question " + questionCounter + "/" + MAX_QUESTIONS;
-
+    if(document.documentElement.lang == 'en'){
+        progressText.innerText = "Question " + questionCounter + "/" + MAX_QUESTIONS;
+    }
+    else{
+        progressText.innerText = "Pregunta " + questionCounter + "/" + MAX_QUESTIONS;
+    }
     //Update the progress bar
     progressbarFull.style.width = `${(questionCounter/MAX_QUESTIONS * 100)}%`;
 

@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Options</title>
-    <link rel="stylesheet" href="css/app.css">
-    <meta name="description" content="Flags of the World Quiz-Options Page">
-    <script src="./js/theme.js"></script>
+    <link rel="stylesheet" href="../css/app.css">
+    <meta name="description" content="Quiz Banderas del Mundo - Opciones">
+    <script src="../js/theme.js"></script>
 </head>
-<body> 
+<body>
+    
     <div class="container">
         <div class="flex-center flex-column">
-            <h1>Options</h1>
-            <h4>Language: </h4>
-            <select name="language" id="language" onChange="update()"> 
-                <option value="en">English</option>
+            <h1>Opciones</h1>
+            <h4>Idioma: </h4>
+            <select name="language" id="language"  onChange="update()">
                 <option value="es">Español</option>
+                <option value="en">English</option>   
             </select>
-            <h4>Theme:</h4>
+            <h4>Tema:</h4>
             <input type="checkbox" id="theme-toggler">
 	        <label id="theme-label" for="theme-toggler">
 		        <span class="ball"></span>
 	        </label>
-            <a href="/" class="btn">Go Home</a>
+            <a href="./index.html" class="btn">Volver</a>
         </div>
     </div>
-    <script src="js/options.js"></script>
-    <script src="js/flags.js"></script>
+    <script src="../js/options.js"></script>
     
 </body>
 </html>

@@ -1,6 +1,31 @@
 :root {
-    background-color: #ecf5ff;
-    font-size: 62.5%;
+  --font-color: #333;
+  --select-font-color: #333;
+  --select-border-color: #56a5eb;   
+  --select-bg-color:rgb(221, 235, 243);
+  --btn-font-color: #56a5eb;
+  --btn-bg-color: white;
+  --bg-color: #ecf5ff;
+}
+
+[data-theme="dark"]{
+  --font-color: #ecf5ff;
+  --select-font-color: rgb(221, 235, 243);
+  --select-border-color: #ffffff;
+  --select-bg-color:rgb(78, 78, 78);
+  --btn-font-color: white;
+  --btn-bg-color: #4787c0;
+  --bg-color: #333;
+}
+
+body{
+  background-color: #ecf5ff;
+  background-color: var(--bg-color);
+  transition: background-color 200ms linear;
+}
+html{
+  
+  font-size: 62.5%;
 }
 
 *{
@@ -8,7 +33,7 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333
+    color: var(--font-color)
 }
 
 h1,
@@ -100,8 +125,8 @@ h4{
     border: 0.1rem solid #56a5eb;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: #56a5eb;
-    background-color: white;
+    color: var(--btn-font-color);
+    background-color: var(--btn-bg-color);
   }
   
   .btn:hover {
@@ -146,14 +171,102 @@ select{
   padding: 1rem 0;
   width: 20rem;
   text-align: center;
-  border: 0.1rem solid #56a5eb;
+  border: 0.1rem solid var(--select-border-color);
   margin-bottom: 1rem;
   text-decoration: none;
-  color: #333;
-  background-color: rgb(221, 235, 243);
+  color: var(--select-font-color);
+  background-color: var(--select-bg-color);
   margin-bottom: 3rem;
 }
 
 select#language{
-  margin-bottom: 5rem
+  margin-bottom: 2rem
+}
+
+/* LIGHT AND DARK MODE */
+/*
+@media (prefers-color-scheme : light){
+  :root {
+    background-color: #333;
+  }
+  *{
+    color: #ecf5ff;
+  } 
+  select{
+    color: #333;
+    background-color: rgb(221, 235, 243);
+    border: 0.1rem solid #56a5eb;
+  }
+  .btn{
+    color: #56a5eb;
+    background-color: white;
+  }
+}
+
+@media (prefers-color-scheme : dark){
+  :root {
+    background-color: #333;
+  }
+  *{
+    color: #ecf5ff;
+  } 
+  select{
+    color: rgb(221, 235, 243);
+    background-color: rgb(78, 78, 78);
+    border: 0.1rem solid #ffffff;
+  }
+  .btn{
+    color: white;
+    background-color: #4787c0;
+  }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* THEME TOGGLER */
+
+#theme-toggler {
+	opacity: 0;
+	position: absolute;
+  display: none;
+}
+
+#theme-label {
+	line-height: 1.2em;
+	width: 5.2em;
+	height: 2.6em;
+	border-radius: 1.3em;
+	background: #222;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+	position: relative;
+  margin-bottom: 2rem;
+}
+
+.ball {
+	height: 2.2em;
+	width: 2.2em;
+	border-radius: 50%;
+	background: #ccc;
+	position: absolute;
+	top: 0.2em;
+	left: 0.2em;
+	transition: transform 150ms linear;
+}
+
+#theme-toggler:checked + label .ball {
+	transform: translateX(2.6em);
 }
