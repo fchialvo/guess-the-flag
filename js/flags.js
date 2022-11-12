@@ -215,7 +215,7 @@ const countryListAlpha2ES = {
     "BH": "Baréin",
     "BD": "Bangladés",
     "BB": "Barbados",
-    "POR": "Bielorrusia",
+    "BY": "Bielorrusia",
     "BE": "Bélgica",
     "BZ": "Belice",
     "BJ": "Benín",
@@ -251,7 +251,7 @@ const countryListAlpha2ES = {
     "DJ": "Yibuti",
     "DM": "Dominica",
     "DO": "República Dominicana",
-    "CE": "Ecuador",
+    "EC": "Ecuador",
     "EG": "Egipto",
     "SV": "El Salvador",
     "GQ": "Guinea Ecuatorial",
@@ -277,8 +277,8 @@ const countryListAlpha2ES = {
     "HN": "Honduras",
     "HK": "Hong Kong",
     "HU": "Hungría",
-    "ES": "Islandia",
-    "En" : "India",
+    "IS": "Islandia",
+    "IN" : "India",
     "ID": "Indonesia",
     "IR": "Irán",
     "IQ": "Irak",
@@ -333,7 +333,7 @@ const countryListAlpha2ES = {
     "OM": "Omán",
     "PK": "Pakistán",
     "PW": "Palaus",
-    "PD": "Palestina",
+    "PS": "Palestina",
     "PA": "Panamá",
     "PG": "Papúa Nueva Guinea",
     "PY": "Paraguay",
@@ -400,6 +400,7 @@ const countryListAlpha2ES = {
 }
 
 let flags = []; 
+
 
 const countryNames = [];
 if(document.documentElement.lang == 'en'){
