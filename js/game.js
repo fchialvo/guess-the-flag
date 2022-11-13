@@ -53,14 +53,18 @@ getNewFlag = () => {
 
     flag.src = currentFlag.flag;
 
-    choices.forEach(choice => {
-        const number = choice.dataset['number'];
-        choice.innerText = currentFlag.answers[number-1];
-    });
+    flag.addEventListener("load", ()=>{
 
-    availableFlags.splice(flagIndex, 1);
+        choices.forEach(choice => {
+            const number = choice.dataset['number'];
+            choice.innerText = currentFlag.answers[number-1];
+        });
+    
+        availableFlags.splice(flagIndex, 1);
+    
+        acceptingAnswers = true;
+    })
 
-    acceptingAnswers = true;
 }
 
 
